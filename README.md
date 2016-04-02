@@ -22,11 +22,11 @@ The PageSpeed Insights API returns a numeric summary of the results of each page
 
 Below are examples of how the speedfinder and speedlist functions could be called in an R script.
 
-``` #get speed metrics for a single URL and assign it to a variable
+``` #get speed metrics for a single URL and assign it to a variable ```
 
-df1 <- speedfinder("https://www.cars.com","mobile","atextkeyigotfromgoogle111") ```
+``` df1 <- speedfinder("https://www.cars.com","mobile","atextkeyigotfromgoogle111") ```
 
-``` #get speed metrics for a list of URLs and have it all returned in a single dataframe_
+``` #get speed metrics for a list of URLs and have it all returned in a single dataframe ```
 
-df2 <- speedlist(c("https://www.cars.com","http://www.yahoo.com","http://www.techmeme.com"),
-                 "mobile","atextkeyigotfromgoogle111") ```
+``` df2 <- speedlist(c("https://www.cars.com","http://www.yahoo.com","http://www.techmeme.com"), ```
+```                 "mobile","atextkeyigotfromgoogle111") ``` 
