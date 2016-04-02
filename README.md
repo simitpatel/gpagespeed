@@ -10,8 +10,9 @@ The PageSpeed Insights API returns a numeric summary of the results of each page
 
 *_url_: The url argument refers to the url of the document on which the PageSpeed Insights API should be run and the corresponding summary metrics returned.
 *_strategy_: This argument should have one of two potential text string inputs: "desktop" or "mobile" to denote the device context that the PageSpeed Insights API should use in its evaluation.
-*_key_: This is the key that is required to use the API. [Visit Google's Developer Console](https://developers.google.com/console/help/using-keys) to obtain your free key.  
-1.speedlist. The speedlist function is like the speedfinder function, but allows processing of many URLs and returns a dataframe in which each observation corresponds to a unique URL. Like speedfinder, it accepts three arguments:
+*_key_: This is the key that is required to use the API. [Visit Google's Developer Console](https://developers.google.com/console/help/using-keys) to obtain your free key. 
+
+2.speedlist. The speedlist function is like the speedfinder function, but allows processing of many URLs and returns a dataframe in which each observation corresponds to a unique URL. Like speedfinder, it accepts three arguments:
 
 *_pagelist_: A list object in which each item in the list is a URL listed as a character string. 
 *_strategy_: This argument should have one of two potential text string inputs: "desktop" or "mobile" to denote the device context that the PageSpeed Insights API should use in its evaluation.
@@ -21,11 +22,11 @@ The PageSpeed Insights API returns a numeric summary of the results of each page
 
 Below are examples of how the speedfinder and speedlist functions could be called in an R script.
 
-get speed metrics for a single URL and assign it to a variable
+_get speed metrics for a single URL and assign it to a variable_
 
 df1 <- speedfinder("https://www.cars.com","mobile","atextkeyigotfromgoogle111")
 
-#get speed metrics for a list of URLs and have it all returned in a single dataframe
+_get speed metrics for a list of URLs and have it all returned in a single dataframe_
 
 df2 <- speedlist(c("https://www.cars.com","http://www.yahoo.com","http://www.techmeme.com"),
                  "mobile","atextkeyigotfromgoogle111")
