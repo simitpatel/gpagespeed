@@ -24,9 +24,9 @@ Below are examples of how the speedfinder and speedlist functions could be calle
 
 _get speed metrics for a single URL and assign it to a variable_
 
-df1 <- speedfinder("https://www.cars.com","mobile","atextkeyigotfromgoogle111")
+```df1 <- speedfinder("https://www.cars.com","mobile","atextkeyigotfromgoogle111")```
 
 _get speed metrics for a list of URLs and have it all returned in a single dataframe_
 
-df2 <- speedlist(c("https://www.cars.com","http://www.yahoo.com","http://www.techmeme.com"),
-                 "mobile","atextkeyigotfromgoogle111")
+```df2 <- speedlist(c("https://www.cars.com","http://www.yahoo.com","http://www.techmeme.com"),
+                 "mobile","atextkeyigotfromgoogle111")```
