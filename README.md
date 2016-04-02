@@ -6,16 +6,16 @@ The PageSpeed Insights API returns a numeric summary of the results of each page
 
 #Functions in gpagespeed
 
-1.speedfinder. The speedfinder function returns a dataframe with a single observation and columsn of numeric data as its response. It accepts three arguments:
+<strong>1.speedfinder.</strong> The speedfinder function returns a dataframe with a single observation and columsn of numeric data as its response. It accepts three arguments:
 
-*_url_: The url argument refers to the url of the document on which the PageSpeed Insights API should be run and the corresponding summary metrics returned.
-*_strategy_: This argument should have one of two potential text string inputs: "desktop" or "mobile" to denote the device context that the PageSpeed Insights API should use in its evaluation.
+*_url_: The url argument refers to the url of the document on which the PageSpeed Insights API should be run and the corresponding summary metrics returned.<br />
+*_strategy_: This argument should have one of two potential text string inputs: "desktop" or "mobile" to denote the device context that the PageSpeed Insights API should use in its evaluation.<br />
 *_key_: This is the key that is required to use the API. [Visit Google's Developer Console](https://developers.google.com/console/help/using-keys) to obtain your free key. 
 
-2.speedlist. The speedlist function is like the speedfinder function, but allows processing of many URLs and returns a dataframe in which each observation corresponds to a unique URL. Like speedfinder, it accepts three arguments:
+<strong>2.speedlist.</strong> The speedlist function is like the speedfinder function, but allows processing of many URLs and returns a dataframe in which each observation corresponds to a unique URL. Like speedfinder, it accepts three arguments:
 
-*_pagelist_: A list object in which each item in the list is a URL listed as a character string. 
-*_strategy_: This argument should have one of two potential text string inputs: "desktop" or "mobile" to denote the device context that the PageSpeed Insights API should use in its evaluation.
+*_pagelist_: A list object in which each item in the list is a URL listed as a character string. <br />
+*_strategy_: This argument should have one of two potential text string inputs: "desktop" or "mobile" to denote the device context that the PageSpeed Insights API should use in its evaluation.<br />
 *_key_: This is the key that is required to use the API. [Visit Google's Developer Console](https://developers.google.com/console/help/using-keys) to obtain your free key.  
 
 #Example Usage
