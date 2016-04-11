@@ -14,7 +14,7 @@ library(gtools)
 
 #' @export
 speedfinder <- function(url,strategy,key) {
-  pid <- fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key))
+  pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key))
   frame1 <- cbind(as.data.frame(pid[2]),as.data.frame(pid[3]),as.data.frame(pid[5]),as.data.frame(pid[6]))
   rbind.data.frame(data.frame(), frame1,make.row.names=FALSE)
 }
@@ -26,7 +26,7 @@ speedfinder <- function(url,strategy,key) {
 
 #' @export
 speedfinder2 <- function(url,strategy,key) {
-  pid <- fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key))
+  pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key))
   frame1 <- cbind(as.data.frame(pid[2]),as.data.frame(pid[3]),as.data.frame(pid[5]),as.data.frame(pid[6]))
 }
 
