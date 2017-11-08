@@ -1,6 +1,3 @@
-library(RJSONIO)
-library(gtools)
-
 #' Speed results for 1 URL
 #'
 #' The speedfinder function returns the Google Page Speed Insights test results for a single URL as a dataframe.
