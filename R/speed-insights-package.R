@@ -45,7 +45,7 @@ speedfinder2 <- function(url,strategy,key) {
 #' @export
 speedlist <- function(pagelist,strategy,key) {
   list1 <- lapply(pagelist,speedfinder2,strategy,key)
-  suppressWarnings(do.call("smartbind",list1))
+  suppressWarnings(do.call(gtools::smartbind,list1))
   }
 
 
