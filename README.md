@@ -6,9 +6,9 @@ The PageSpeed Insights API returns a numeric summary of the results of each page
 
 # Functions in gpagespeed
 
-<strong>`speedfinder`</strong> The `speedfinder` function returns a dataframe with a single observation and columsn of numeric data as its response. It accepts three arguments:
+<strong>`speedfinder`</strong> The `speedfinder` function returns a dataframe with a single observation and columns of numeric data as its response. It accepts three arguments:
 
-* _url_: The url argument refers to the url of the document on which the PageSpeed Insights API should be run and the corresponding summary metrics returned.    
+* _url_: The url argument refers to the URL of the document on which the PageSpeed Insights API should be run and the corresponding summary metrics returned.    
 * _strategy_: This argument should have one of two potential text string inputs: "`desktop`" or "`mobile`" to denote the device context that the PageSpeed Insights API should use in its evaluation.   
 * _key_: This is the key that is required to use the API. [Visit Google's Developer Console](https://developers.google.com/console/help/using-keys) to obtain your free key.    
 
@@ -24,9 +24,10 @@ Below are examples of how the `speedfinder` and `speedlist` functions could be c
 
 ``` # Get speed metrics for a single URL and assign it to a variable ```
 
-``` df1 <- speedfinder("https://www.cars.com","mobile","atextkeyigotfromgoogle111") ```
+``` df1 <- speedfinder("https://www.cars.com", "mobile", "atextkeyigotfromgoogle111") ```
 
 ``` # Get speed metrics for a list of URLs and have it all returned in a single dataframe ```
 
-``` df2 <- speedlist(c("https://www.cars.com","http://www.yahoo.com","http://www.techmeme.com"), ```
-```                 "mobile","atextkeyigotfromgoogle111") ``` 
+``` df2 <- speedlist(c("https://www.cars.com", "http://www.yahoo.com", "http://www.techmeme.com"), 
+                        "mobile",
+                        "atextkeyigotfromgoogle111") ``` 
