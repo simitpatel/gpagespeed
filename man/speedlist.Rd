@@ -4,7 +4,7 @@
 \alias{speedlist}
 \title{Speed results for a list of URLs}
 \usage{
-speedlist(pagelist, strategy, key)
+speedlist(pagelist, strategy, key, filter_third_party_resources = FALSE)
 }
 \arguments{
 \item{pagelist}{A list of URLs on which to run the Google Page Speed Insights test.}
@@ -13,6 +13,8 @@ speedlist(pagelist, strategy, key)
 are either the string "mobile" or the string "desktop".}
 
 \item{key}{A unique key obtainable from Google by registering for free as a Google developer.}
+
+\item{filter_third_party_resources}{A boolean to indicate if third party resources should be filtered out before PageSpeed analysis. (Default: FALSE)}
 }
 \description{
 The speedlist function submits a list of URLs to the Google Page Speed Insights API, and returns a dataframe in which

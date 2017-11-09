@@ -4,7 +4,7 @@
 \alias{speedfinder2}
 \title{Function within speedlist}
 \usage{
-speedfinder2(url, strategy, key)
+speedfinder2(url, strategy, key, filter_third_party_resources = FALSE)
 }
 \arguments{
 \item{url}{A list of URLs on which to run the Google Page Speed Insights test.}
@@ -13,6 +13,8 @@ speedfinder2(url, strategy, key)
 are either the string "mobile" or the string "desktop".}
 
 \item{key}{A unique key obtainable from Google by registering for free as a Google developer.}
+
+\item{filter_third_party_resources}{A boolean to indicate if third party resources should be filtered out before PageSpeed analysis. (Default: FALSE)}
 }
 \description{
 Speedfinder2 is a function utilized by speedlist to allow a list of URLs to be submitted to the Google Page Speed

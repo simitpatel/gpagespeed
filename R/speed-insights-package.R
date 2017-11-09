@@ -6,14 +6,15 @@
 #' @param strategy Whether the URL should be evaluated in a mobile or desktop context. Accordingly, acceptable values
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
+#' @param filter_third_party_resources A boolean to indicate if third party resources should be filtered out before PageSpeed analysis. (Default: FALSE)
 #' @examples
 #' \dontrun{
 #' speedfinder("https://www.cars.com","mobile",key)
 #' }
 
 #' @export
-speedfinder <- function(url,strategy,key) {
-  pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key))
+speedfinder <- function(url,strategy,key,filter_third_party_resources=FALSE) {
+  pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key,"&filter_third_party_resources=",filter_third_party_resources))
   frame1 <- cbind(as.data.frame(pid[2]),as.data.frame(pid[3]),as.data.frame(pid[5]),as.data.frame(pid[6]))
   rbind.data.frame(data.frame(), frame1,make.row.names=FALSE)
 }
@@ -26,10 +27,11 @@ speedfinder <- function(url,strategy,key) {
 #' @param strategy Whether the list of URLs should be evaluated in a mobile or desktop context. Accordingly, acceptable values
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
+#' @param filter_third_party_resources A boolean to indicate if third party resources should be filtered out before PageSpeed analysis. (Default: FALSE)
 
 #' @export
-speedfinder2 <- function(url,strategy,key) {
-  pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key))
+speedfinder2 <- function(url,strategy,key,filter_third_party_resources=FALSE) {
+  pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key,"&filter_third_party_resources=",filter_third_party_resources))
   frame1 <- cbind(as.data.frame(pid[2]),as.data.frame(pid[3]),as.data.frame(pid[5]),as.data.frame(pid[6]))
 }
 
@@ -42,14 +44,15 @@ speedfinder2 <- function(url,strategy,key) {
 #' @param strategy Whether the list of URLs should be evaluated in a mobile or desktop context. Accordingly, acceptable values
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
+#' @param filter_third_party_resources A boolean to indicate if third party resources should be filtered out before PageSpeed analysis. (Default: FALSE)
 #' @examples
 #' \dontrun{
 #' speedlist(listofURLs,"mobile",key)
 #' }
 
 #' @export
-speedlist <- function(pagelist,strategy,key) {
-  list1 <- lapply(pagelist,speedfinder2,strategy,key)
+speedlist <- function(pagelist,strategy,key,filter_third_party_resources=FALSE) {
+  list1 <- lapply(pagelist,speedfinder2,strategy,key,filter_third_party_resources)
   suppressWarnings(do.call(gtools::smartbind,list1))
   }
 
