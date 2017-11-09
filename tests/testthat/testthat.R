@@ -5,6 +5,7 @@ context("gpagespeed functions")
 
 test_check("gpagespeed")
 
+# Need to set an API key to run the tests
 gspeed_key = 'YOUR_API_KEY'
 
 test_that("speedfinder function", {
