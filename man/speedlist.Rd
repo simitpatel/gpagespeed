@@ -19,5 +19,7 @@ The speedlist function submits a list of URLs to the Google Page Speed Insights 
 each row contains the results from the API for a unique URL in the list.
 }
 \examples{
+\dontrun{
 speedlist(listofURLs,"mobile",key)
+}
 }

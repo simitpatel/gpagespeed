@@ -7,7 +7,9 @@
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
 #' @examples
+#' \dontrun{
 #' speedfinder("https://www.cars.com","mobile",key)
+#' }
 
 #' @export
 speedfinder <- function(url,strategy,key) {
@@ -41,7 +43,9 @@ speedfinder2 <- function(url,strategy,key) {
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
 #' @examples
+#' \dontrun{
 #' speedlist(listofURLs,"mobile",key)
+#' }
 
 #' @export
 speedlist <- function(pagelist,strategy,key) {
