@@ -20,4 +20,3 @@ The speedfinder function returns the Google Page Speed Insights test results for
 \examples{
 speedfinder("https://www.cars.com","mobile",key)
 }
-

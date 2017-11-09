@@ -10,4 +10,3 @@ speedfinder2(url, strategy, key)
 Speedfinder2 is a function utilized by speedlist to allow a list of URLs to be submitted to the Google Page Speed
 Insights API.
 }
-

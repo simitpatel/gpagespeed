@@ -21,4 +21,3 @@ each row contains the results from the API for a unique URL in the list.
 \examples{
 speedlist(listofURLs,"mobile",key)
 }
-

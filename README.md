@@ -1,3 +1,5 @@
+[![Travis-CI Build Status](https://travis-ci.org/IronistM/gpagespeed.svg?branch=master)](https://travis-ci.org/IronistM/gpagespeed)
+
 # gpagespeed
 
 gpagespeed is a package designed to facilitate utilization of the Google PageSpeed Insights API. The PageSpeed Insights API provides insight into how Google's bots evaluate a given page, and the factors that web developers may wish to consider in building pages that will render faster. See Google's documentation on the PageSpeed Insights API to learn more about what the API offers as well as practical examples of its usage.
