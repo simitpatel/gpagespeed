@@ -3,3 +3,6 @@
 language: R
 sudo: false
 cache: packages
+global:
+  - R_CHECK_ARGS="--no-build-vignettes --no-manual --timings --no-tests"
+  - _R_CHECK_TIMINGS_="0"
