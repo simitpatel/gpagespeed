@@ -7,7 +7,9 @@
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
 #' @examples
+#' \dontrun{
 #' speedfinder("https://www.cars.com","mobile",key)
+#' }
 
 #' @export
 speedfinder <- function(url,strategy,key) {
@@ -20,6 +22,10 @@ speedfinder <- function(url,strategy,key) {
 #'
 #' Speedfinder2 is a function utilized by speedlist to allow a list of URLs to be submitted to the Google Page Speed
 #' Insights API.
+#' @param url A list of URLs on which to run the Google Page Speed Insights test.
+#' @param strategy Whether the list of URLs should be evaluated in a mobile or desktop context. Accordingly, acceptable values
+#' are either the string "mobile" or the string "desktop".
+#' @param key A unique key obtainable from Google by registering for free as a Google developer.
 
 #' @export
 speedfinder2 <- function(url,strategy,key) {
@@ -32,12 +38,14 @@ speedfinder2 <- function(url,strategy,key) {
 #' The speedlist function submits a list of URLs to the Google Page Speed Insights API, and returns a dataframe in which
 #' each row contains the results from the API for a unique URL in the list.
 #'
-#' @param url A list of URLs on which to run the Google Page Speed Insights test.
+#' @param pagelist A list of URLs on which to run the Google Page Speed Insights test.
 #' @param strategy Whether the list of URLs should be evaluated in a mobile or desktop context. Accordingly, acceptable values
 #' are either the string "mobile" or the string "desktop".
 #' @param key A unique key obtainable from Google by registering for free as a Google developer.
 #' @examples
+#' \dontrun{
 #' speedlist(listofURLs,"mobile",key)
+#' }
 
 #' @export
 speedlist <- function(pagelist,strategy,key) {

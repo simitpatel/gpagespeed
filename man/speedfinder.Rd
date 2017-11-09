@@ -18,6 +18,7 @@ are either the string "mobile" or the string "desktop".}
 The speedfinder function returns the Google Page Speed Insights test results for a single URL as a dataframe.
 }
 \examples{
+\dontrun{
 speedfinder("https://www.cars.com","mobile",key)
 }
-
+}

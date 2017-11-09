@@ -7,18 +7,19 @@
 speedlist(pagelist, strategy, key)
 }
 \arguments{
+\item{pagelist}{A list of URLs on which to run the Google Page Speed Insights test.}
+
 \item{strategy}{Whether the list of URLs should be evaluated in a mobile or desktop context. Accordingly, acceptable values
 are either the string "mobile" or the string "desktop".}
 
 \item{key}{A unique key obtainable from Google by registering for free as a Google developer.}
-
-\item{url}{A list of URLs on which to run the Google Page Speed Insights test.}
 }
 \description{
 The speedlist function submits a list of URLs to the Google Page Speed Insights API, and returns a dataframe in which
 each row contains the results from the API for a unique URL in the list.
 }
 \examples{
+\dontrun{
 speedlist(listofURLs,"mobile",key)
 }
-
+}

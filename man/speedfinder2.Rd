@@ -6,8 +6,15 @@
 \usage{
 speedfinder2(url, strategy, key)
 }
+\arguments{
+\item{url}{A list of URLs on which to run the Google Page Speed Insights test.}
+
+\item{strategy}{Whether the list of URLs should be evaluated in a mobile or desktop context. Accordingly, acceptable values
+are either the string "mobile" or the string "desktop".}
+
+\item{key}{A unique key obtainable from Google by registering for free as a Google developer.}
+}
 \description{
 Speedfinder2 is a function utilized by speedlist to allow a list of URLs to be submitted to the Google Page Speed
 Insights API.
 }
-
