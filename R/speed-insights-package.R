@@ -15,8 +15,11 @@
 #' @export
 speedfinder <- function(url,strategy,key,filter_third_party_resources=FALSE) {
   pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key,"&filter_third_party_resources=",filter_third_party_resources))
-  frame1 <- cbind(as.data.frame(pid[2]),as.data.frame(pid[3]),as.data.frame(pid[5]),as.data.frame(pid[6]))
+  tmp <- as.data.frame(pid[6], stringsAsFactors=FALSE)
+  tmp <- as.data.frame(lapply(tmp, as.numeric), stringsAsFactors=FALSE)
+  frame1 <- cbind(as.data.frame(pid[2], stringsAsFactors=FALSE),as.data.frame(pid[3], stringsAsFactors=FALSE),as.data.frame(pid[5], stringsAsFactors=FALSE), tmp)
   rbind.data.frame(data.frame(), frame1,make.row.names=FALSE)
+
 }
 
 #' Function within speedlist
@@ -32,7 +35,9 @@ speedfinder <- function(url,strategy,key,filter_third_party_resources=FALSE) {
 #' @export
 speedfinder2 <- function(url,strategy,key,filter_third_party_resources=FALSE) {
   pid <- RJSONIO::fromJSON(paste0("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=",url,"&strategy=",strategy,"&key=",key,"&filter_third_party_resources=",filter_third_party_resources))
-  frame1 <- cbind(as.data.frame(pid[2]),as.data.frame(pid[3]),as.data.frame(pid[5]),as.data.frame(pid[6]))
+  tmp <- as.data.frame(pid[6], stringsAsFactors=FALSE)
+  tmp <- as.data.frame(lapply(tmp, as.numeric), stringsAsFactors=FALSE)
+  frame1 <- cbind(as.data.frame(pid[2], stringsAsFactors=FALSE),as.data.frame(pid[3], stringsAsFactors=FALSE),as.data.frame(pid[5], stringsAsFactors=FALSE), tmp)
 }
 
 #' Speed results for a list of URLs
