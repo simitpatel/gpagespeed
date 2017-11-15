@@ -1,13 +1,23 @@
 Package: gpagespeed
 Title: Google Page Speed API
-Version: 0.0.0.9000
-Authors@R: person("Simit", "Patel", email = "simitp@gmail.com", role = c("aut", "cre"))
-Description: A way to call the Google Page Speed Insights API directly into your
-    R console. The package offers two functions that return results the API in the
-    form of a data frame. The first function, speedfinder, is to call the results
-    on a single URL, while the second function, speedlist, accepts a list of URLs
-    and returns a single dataframe with results from the API for all the URLs in the
+Version: 0.0.1
+Authors@R: 
+    c(person(given = "Simit",
+             family = "Patel",
+             role = c("aut", "cre"),
+             email = "simitp@gmail.com"),
+      person(given = "Manos",
+             family = "Parzakonis",
+             role = "ctb",
+             email = "parzakonis.m@gmail.com"))
+Description: A way to call the Google Page Speed Insights API
+    directly into your R console. The package offers two functions that
+    return results the API in the form of a data frame. The first
+    function, speedfinder, is to call the results on a single URL, while
+    the second function, speedlist, accepts a list of URLs and returns a
+    single dataframe with results from the API for all the URLs in the
     list.
+License: GPL-3
 Depends: 
     R (>= 3.2.3)
 Imports: 
@@ -18,7 +28,6 @@ Suggests:
     knitr,
     rmarkdown,
     testthat
-License: GPL-3
-LazyData: true
-RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+LazyData: true
+RoxygenNote: 6.0.1
